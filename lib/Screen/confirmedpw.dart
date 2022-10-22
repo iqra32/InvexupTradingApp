@@ -47,7 +47,7 @@ class _ConfirmedpwState extends State<Confirmedpw> {
               ),
               child: const Center(
                   child: Text(
-                'RESEND EMAIL',
+                'RESEND EMAil',
                 style: TextStyle(color: Colors.white),
               )),
             ),
