@@ -14,6 +14,7 @@ class _SignUPState extends State<SignUP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       resizeToAvoidBottomInset: false,
       body: Column(children: [
         Container(
           padding: const EdgeInsets.only(top: 50),
@@ -43,7 +44,8 @@ class _SignUPState extends State<SignUP> {
             // controller: nameController,
             decoration: const InputDecoration(
               border: OutlineInputBorder(
-                  borderRadius: const BorderRadius.all(Radius.circular(20.0))),
+                  borderRadius:
+                      const BorderRadius.all(Radius.circular(20.0))),
               labelText: 'E-mail',
             ),
           ),
@@ -57,7 +59,8 @@ class _SignUPState extends State<SignUP> {
             // controller: nameController,
             decoration: const InputDecoration(
               border: OutlineInputBorder(
-                  borderRadius: const BorderRadius.all(Radius.circular(20.0))),
+                  borderRadius:
+                      const BorderRadius.all(Radius.circular(20.0))),
               labelText: 'Password',
             ),
           ),

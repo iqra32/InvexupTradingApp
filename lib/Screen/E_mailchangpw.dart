@@ -15,6 +15,7 @@ class _EmailChnagepwState extends State<EmailChnagepw> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           Container(

@@ -14,6 +14,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       resizeToAvoidBottomInset: false,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,27 +22,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: 50.0,
+              const  SizedBox(
+                  height: 120.0,
                 ),
-                Icon(Icons.arrow_back_ios),
-                SizedBox(
+                const Icon(Icons.arrow_back_ios),
+               const  SizedBox(
                   width: 250.0,
                 ),
-                Text(
+               const  Text(
                   "Skip",
                   textAlign: TextAlign.right,
                 ),
               ],
             ),
           ),
-          SizedBox(
+       const    SizedBox(
             height: 20.0,
           ),
-          Text(
+        const   Text(
             "Follow our tipsto\n achieve  success!",
             textAlign: TextAlign.center,
             style: TextStyle(
