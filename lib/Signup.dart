@@ -15,109 +15,130 @@ class _SignUPState extends State<SignUP> {
   Widget build(BuildContext context) {
     return Scaffold(
        resizeToAvoidBottomInset: false,
-      body: Column(children: [
-        Container(
-          padding: const EdgeInsets.only(top: 50),
-          height: 340,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
+      body: SingleChildScrollView(
+        child: Column(children: [
+          Container(
+            // padding: const EdgeInsets.only(top: 50),
+            height: 340,
+            width: double.infinity,
+            // decoration: const BoxDecoration(
+            //   image: DecorationImage(
+            //     image: AssetImage(
+            //       'assets/login321.png',
+            //     ),
+            //     fit: BoxFit.fill,
+            //   ),
+            // ),
+            child: Image.asset(
                 'assets/login321.png',
+                fit: BoxFit.fill,
               ),
-              fit: BoxFit.fill,
-            ),
           ),
-        ),
-        Container(
-            alignment: Alignment.center,
-            padding: const EdgeInsets.all(10),
-            child: const Text(
-              'Create a free account',
-              style: TextStyle(fontSize: 30),
-            )),
-        Container(
-          height: 70,
-          width: 250,
-          padding: const EdgeInsets.all(10),
-          child: TextField(
-            // controller: nameController,
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(
-                  borderRadius:
-                      const BorderRadius.all(Radius.circular(20.0))),
-              labelText: 'E-mail',
-            ),
-          ),
-        ),
-        Container(
-          height: 70,
-          width: 250,
-          padding: const EdgeInsets.all(10),
-          child: TextField(
-            obscureText: true,
-            // controller: nameController,
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(
-                  borderRadius:
-                      const BorderRadius.all(Radius.circular(20.0))),
-              labelText: 'Password',
-            ),
-          ),
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => EmailChnagepw()),
-            );
-          },
-          child: Container(
-            height: 50,
-            width: 230,
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-              gradient: LinearGradient(
-                  colors: AppColors().bottomFooterGradient,
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomRight),
-            ),
-            child: const Center(
-                child: Text(
-              'Sign Up',
-              style: TextStyle(color: Colors.white),
-            )),
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            TextButton(
-              onPressed: () {},
+         Container(
+              alignment: Alignment.center,
+              padding: const EdgeInsets.all(10),
               child: const Text(
-                'Forgot Password?',
-                style: TextStyle(
-                  // decoration: TextDecoration.underline,
-                  // fontSize: 18,
-                  color: Colors.grey,
-                ),
+                'Create a Free Account',
+                style: TextStyle(fontSize: 30),
+              )),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: const [
+                  SizedBox(
+                    width: 235,
+                    // height: 45,
+                    child: TextField(
+                      // controller: nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0))),
+                        labelText: 'E-mail',
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                   width: 235, 
+                    child: TextField(
+                      // obscureText: true,
+                      // controller: nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        ),
+                        labelText: 'Password',
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+               SizedBox(
+                    height: 20,
+                  ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => EmailChnagepw()),
+              );
+            },
+            child: Container(
+              height: 50,
+              width: 230,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                gradient: LinearGradient(
+                    colors: AppColors().bottomFooterGradient,
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomRight),
               ),
+              child: const Center(
+                  child: Text(
+                'Singn Up',
+                style: TextStyle(color: Colors.white),
+              )),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'register');
-              },
-              child: const Text(
-                'Login',
-                style: TextStyle(
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Forgot Password?',
+                  style: TextStyle(
                     // decoration: TextDecoration.underline,
                     // fontSize: 18,
-                    color: Color.fromARGB(255, 158, 158, 158)),
+                    color: Colors.grey,
+                  ),
+                ),
               ),
-            ),
-          ],
-        ),
-      ]),
+              TextButton(
+                onPressed: () {
+              //     Navigator.pushReplacement(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => EmailChnagepw()),
+              // );
+                },
+                child: const Text(
+                  'Login',
+                  style: TextStyle(
+                      // decoration: TextDecoration.underline,
+                      // fontSize: 18,
+                      color: Color.fromARGB(255, 158, 158, 158)),
+                ),
+              ),
+            ],
+          ),
+        ]),
+      ),
     );
   }
 }

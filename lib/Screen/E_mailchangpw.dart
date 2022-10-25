@@ -37,6 +37,7 @@ class _EmailChnagepwState extends State<EmailChnagepw> {
           Text(
             "We have sent you an\n email to change your\n password ",
             style: TextStyle(
+              fontSize: 20,
                 fontWeight: FontWeight.bold, color: Color(0xFF656565)),
             textAlign: TextAlign.center,
           ),

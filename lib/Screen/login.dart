@@ -31,6 +31,7 @@ class _LoginPageState extends State<LoginPage> {
             // ),
             child: Image.asset(
               'assets/login321.png',
+              fit: BoxFit.fill,
             ),
           ),
           Container(
@@ -44,27 +45,40 @@ class _LoginPageState extends State<LoginPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: const [
-                  TextField(
-                    // controller: nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(20.0))),
-                      labelText: 'E-mail',
+                  SizedBox(
+                    width: 235,
+                    // height: 45,
+                    child: TextField(
+                      // controller: nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20.0))),
+                        labelText: 'E-mail',
+                      ),
                     ),
                   ),
-                  TextField(
-                    // obscureText: true,
-                    // controller: nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                   width: 235, 
+                    child: TextField(
+                      // obscureText: true,
+                      // controller: nameController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        ),
+                        labelText: 'Password',
                       ),
-                      labelText: 'Password',
                     ),
                   ),
                 ],
               )),
+               SizedBox(
+                    height: 20,
+                  ),
           GestureDetector(
             onTap: () {
               Navigator.pushReplacement(
@@ -84,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: const Center(
                   child: Text(
-                'Login',
+                'LOGIN',
                 style: TextStyle(color: Colors.white),
               )),
             ),
@@ -108,7 +122,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, 'register');
+                  // Navigator.pushReplacement(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => SignUP()),
+                  // );
                 },
                 child: const Text(
                   'Sign Up',
