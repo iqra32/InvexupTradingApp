@@ -30,7 +30,7 @@ class _SignUPState extends State<SignUP> {
             //   ),
             // ),
             child: Image.asset(
-                'assets/login321.png',
+                'assets/login.png',
                 fit: BoxFit.fill,
               ),
           ),

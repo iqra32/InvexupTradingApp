@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
             //   ),
             // ),
             child: Image.asset(
-              'assets/login321.png',
+              'assets/login.png',
               fit: BoxFit.fill,
             ),
           ),
