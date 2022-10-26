@@ -25,7 +25,7 @@ class _EmailChnagepwState extends State<EmailChnagepw> {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  'assets/emailpw.png',
+                  'assets/chnagepw.png',
                 ),
                 fit: BoxFit.fill,
               ),
