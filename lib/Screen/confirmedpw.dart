@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tradix/Screen/newsscreen.dart';
 import 'package:tradix/general/appColor.dart';
 
 class Confirmedpw extends StatefulWidget {
@@ -22,7 +23,7 @@ class _ConfirmedpwState extends State<Confirmedpw> {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  'assets/Group43.png',
+                  'assets/new.png',
                 ),
                 fit: BoxFit.fill,
               ),
@@ -31,10 +32,10 @@ class _ConfirmedpwState extends State<Confirmedpw> {
           SizedBox(height: 20.0),
           GestureDetector(
             onTap: () {
-              // Navigator.pushReplacement(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => Confirmedpw()),
-              // );
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => NewsScreen()),
+              );
             },
             child: Container(
               height: 50,
