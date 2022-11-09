@@ -114,8 +114,9 @@ class _NewsScreenState extends State<NewsScreen> {
                     // SizedBox(height: 05.0),
                     Container(
                       margin: const EdgeInsets.all(15.0),
-                      width: 300.0,
-                      height: 150.0,
+                      // width: 300.0,
+                      height: 176,
+                      width: double.infinity,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(
@@ -133,7 +134,8 @@ class _NewsScreenState extends State<NewsScreen> {
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(5)),
                                 height: 104,
-                                width: double.infinity,
+                                // width: double.infinity,
+
                                 child: Row(
                                   children: [
                                     ClipRRect(
@@ -146,13 +148,13 @@ class _NewsScreenState extends State<NewsScreen> {
                                             AssetImage(newsList[index].image!),
                                       ),
                                     ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
+                                    // const SizedBox(
+                                    //   width: 2,
+                                    // ),
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10,
-                                          right: 0,
+                                          right: 5,
                                           bottom: 10,
                                           top: 10),
                                       child: Column(
@@ -194,7 +196,7 @@ class _NewsScreenState extends State<NewsScreen> {
                                             height: 5,
                                           ),
                                           Container(
-                                            width: 220,
+                                            width: 200,
                                             // height: 70,
                                             child: Text(
                                               newsList[index].description!,
@@ -214,8 +216,9 @@ class _NewsScreenState extends State<NewsScreen> {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         IconButton(
+                                            padding: EdgeInsets.all(0),
                                             onPressed: () {},
-                                            icon: Icon(
+                                            icon: const Icon(
                                                 Icons.arrow_forward_rounded)),
                                       ],
                                     ),
